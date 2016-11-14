@@ -37,12 +37,14 @@ module.exports = {
         test: /\.scss$/,
         exclude: /node_modules/,
         loaders: ['raw-loader', 'sass-loader']
-      },
-      {
-        test: /\.css$/,
-        include: helpers.root('client/src', 'app'),
-        loader: 'raw'
       }
+
+      //TODO: Duplicate CSS loader
+      // {
+      //   test: /\.css$/,
+      //   include: helpers.root('client/src', 'app'),
+      //   loader: 'raw'
+      // }
     ]
   },
 
