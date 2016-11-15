@@ -1,12 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-
-import { NgbdButtonsRadio } from './buttons-radio/buttons-radio';
-import { NgbdTooltipBasic } from './tooltip/tooltip';
-
+import { Component, ViewEncapsulation, AfterViewInit } from '@angular/core';
 
 // TODO: Will I need to keep the global "styles.css" file ? If not - delete the file as well
 // import '../../public/css/styles.css';
 
+declare var $: any
 
 @Component({
   selector: 'my-app',
@@ -14,4 +11,10 @@ import { NgbdTooltipBasic } from './tooltip/tooltip';
   styleUrls: ['./app.styles.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class AppComponent {}
+export class AppComponent {
+
+  ngAfterViewInit() {
+    $('[data-toggle="tooltip"]').tooltip();
+  }
+  
+}

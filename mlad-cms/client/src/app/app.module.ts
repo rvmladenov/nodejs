@@ -6,9 +6,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JsonpModule } from '@angular/http';
 
-import { NgbdButtonsRadio } from './buttons-radio/buttons-radio';
-import { NgbdTooltipBasic } from './tooltip/tooltip';
-
 @NgModule({
   imports: [
     FormsModule, ReactiveFormsModule, JsonpModule,
@@ -16,9 +13,7 @@ import { NgbdTooltipBasic } from './tooltip/tooltip';
     BrowserModule
   ],
   declarations: [
-    AppComponent,
-    NgbdButtonsRadio,
-    NgbdTooltipBasic
+    AppComponent
   ],
   bootstrap: [ AppComponent ]
 })
